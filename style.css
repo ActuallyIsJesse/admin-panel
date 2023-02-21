@@ -7,7 +7,8 @@
     --main-sat: 70%;
     --main-light: 50%;
     --accent: white;
-    --small-text: #656565
+    --small-text: #656565;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -48,7 +49,6 @@ body {
 
 .sidebar-link:hover {
     scale: 1.05;
-    transition: scale .3s;
 }
 
 .logo-link {
@@ -159,8 +159,6 @@ body {
 
 .file-button:hover {
     background-color: hsl(var(--main-hue), var(--main-sat), calc(var(--main-light) - 20%));
-    transition: background-color .3s;
-
 }
 
 .file-button:active {
@@ -173,7 +171,7 @@ body {
     background-color: #f7f7f7;
     display: grid;
     grid-template-columns: 5fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content 1fr;
     gap: 2rem;
 }
 
@@ -223,6 +221,15 @@ color: #3d3d3d;
     gap: 2rem;
 }
 
+
+.card-icons>a {
+    transition: scale .3s;
+}
+
+.card-icons>a:hover {
+    scale: 1.2;
+}
+
 .sidebar-widget {
     background-color: white;
     border-radius: .75rem;
@@ -242,4 +249,17 @@ color: #3d3d3d;
 
 .announcement:first-child {
     border: none;
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1rem;
+    padding: 1rem 0rem;
+}
+
+.trending-user>p{
+    font-weight: 300;
+    color: var(--small-text);
+    font-size: .9rem;
 }
