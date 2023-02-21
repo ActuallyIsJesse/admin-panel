@@ -17,14 +17,17 @@
 
 
 body {
+    height: 100vh;
     display: grid;
     grid-template-columns: 20rem 1fr;
+    grid-template-rows: 1fr;
     font-family: 'Open Sans', sans-serif;
 }
 
 .sidebar {
     display: grid;
-    grid-template-rows: 72px 1fr 1fr;
+    grid-template-rows: 72px min-content min-content;
+    justify-content: start;
     background-color: hsl(var(--main-hue), var(--main-sat), var(--main-light));
     padding: 1rem;
     gap: 3rem;
@@ -54,7 +57,7 @@ body {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: bold;
     gap: 2rem;
     color: var(--accent);
 }
