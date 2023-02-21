@@ -31,9 +31,27 @@ body {
     background-color: hsl(var(--main-hue), var(--main-sat), var(--main-light));
     padding: 1rem;
     gap: 3rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.logo-wrapper {
+.sidebar-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    gap: 2rem;
+    color: var(--accent);
+    transition: scale .3s;
+}
+
+.sidebar-link:hover {
+    scale: 1.05;
+    transition: scale .3s;
+}
+
+.logo-link {
+    text-decoration: none;
     display: flex;
     align-items: center;
     color: var(--accent);
@@ -45,21 +63,13 @@ body {
     fill: var(--accent);
 }
 
+
 .sidebar-list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     list-style: none;
     padding: .5rem;
-}
-
-.sidebar-item {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    gap: 2rem;
-    color: var(--accent);
 }
 
 .sidebar-icon {
@@ -73,7 +83,7 @@ body {
 
 .main-wrapper {
     display: grid;
-    grid-template-rows: 4.5rem 6rem 1fr;
+    grid-template-rows: 4.5rem min-content 1fr;
 }
 
 .upper-bar {
@@ -108,4 +118,64 @@ body {
     width: auto;
     height: 3rem;
     border-radius: 50%;
+}
+
+.profile-image-big {
+    width: auto;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.lower-bar {
+    padding: 1.5rem 3rem 1rem 3rem;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    clip-path: inset(0px 0px -8px 0px);
+
+}
+
+.file-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+    gap: 2rem;
+}
+
+.file-button {
+    background-color: hsl(var(--main-hue), var(--main-sat), var(--main-light));
+    color: var(--accent);
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4rem;
+    transition: background-color .3s;
+}
+
+.file-button:hover {
+    background-color: hsl(var(--main-hue), var(--main-sat), calc(var(--main-light) - 20%));
+    transition: background-color .3s;
+
+}
+
+.file-button:active {
+    background-color: hsl(var(--main-hue), var(--main-sat), calc(var(--main-light) + 20%));
+    transition: background-color .1s;
+}
+
+.main-content {
+    padding: 3rem 1.5rem;
+    background-color: #f7f7f7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects-wrapper {
+grid-row-start: 1;
+grid-row-end: 3;
 }
