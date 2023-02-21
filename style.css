@@ -3,9 +3,9 @@
 
 
 :root {
-    --main-hue: 171;
-    --main-sat: 77%;
-    --main-light: 64%;
+    --main-hue: 170;
+    --main-sat: 70%;
+    --main-light: 50%;
     --accent: white;
 }
 
@@ -26,7 +26,7 @@ body {
 
 .sidebar {
     display: grid;
-    grid-template-rows: 72px min-content min-content;
+    grid-template-rows: 4.5rem min-content min-content;
     justify-content: start;
     background-color: hsl(var(--main-hue), var(--main-sat), var(--main-light));
     padding: 1rem;
@@ -69,4 +69,43 @@ body {
 
 .icon {
     width: 1.5rem;
+}
+
+.main-wrapper {
+    display: grid;
+    grid-template-rows: 4.5rem 6rem 1fr;
+}
+
+.upper-bar {
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 6rem;
+}
+
+.search {
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content 1fr;
+    gap: 1rem;
+}
+
+.search>input {
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #eeeeee;
+}
+
+.account-area {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr max-content;
+}
+
+.profile-image {
+    width: auto;
+    height: 3rem;
+    border-radius: 50%;
 }
